@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<body>
+	<ui:composition>
+		<!-- Slider -->
+		<div id="header">
+			<div class="shell">
+
+				<div id="slider">
+					<div id="slider-holder">
+						<ul>
+							<li>
+								<div class="cl">&nbsp;</div>
+								<div class="slide-image">
+									<a href="#"><h:graphicImage
+											url="/resources/images/slider/coffee1.png" width="230"
+											height="200" /></a>
+								</div>
+								<div class="slide-info" dir="#{msg.dir}">
+									<h2>
+										#{msg.slider1title}
+									</h2>
+									<p>#{msg.slider1content}  </p>
+								</div>
+								<div class="cl">&nbsp;</div>
+							</li>
+							<li>
+								<div class="cl">&nbsp;</div>
+								<div class="slide-image">
+									<a href="#"> <h:graphicImage id="image-logo"
+											url="/resources/images/slider/laptop003.jpg" width="320"
+											height="170" /></a>
+								</div>
+								<div class="slide-info" dir="#{msg.dir}">
+									<h2>
+										#{msg.slider2title}
+									</h2>
+									<p>#{msg.slider2content}</p>
+								</div>
+								<div class="cl">&nbsp;</div>
+							</li>
+							<li>
+								<div class="cl">&nbsp;</div>
+								<div class="slide-image">
+									<a href="#"><h:graphicImage
+											url="/resources/images/slider/letter2.png" width="320"
+											height="170" /></a>
+								</div>
+								<div class="slide-info" dir="#{msg.dir}">
+									<h2>
+										#{msg.slider3title}
+									</h2>
+									<p>#{msg.slider3content}</p>
+								</div>
+								<div class="cl">&nbsp;</div>
+							</li>
+						</ul>
+					</div>
+					<div id="slider-nav">
+						<a href="#" class="prev">Previous</a> <a href="#" class="next">Next</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- End Slider -->
+	</ui:composition>
+</body>
+</html>
+
+

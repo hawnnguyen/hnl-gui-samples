@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Hawn Nguyen Sample Webapp</title>
+	<!-- [standard:css] begin -->
+	<h:outputStylesheet name="standard-style.css" library="css" />
+	<!-- [standard:css] begin -->
+	<!-- [JS] begin -->
+	<h:outputScript library="js" name="standard/jquery-1.4.1.min.js" />
+	<h:outputScript library="js" name="standard/jquery-func.js" />
+	<h:outputScript library="js" name="standard/jquery.jcarousel.pack.js" />
+	<h:outputScript library="js" name="menu/stuHover.js" />
+	<!-- [JS] end -->
+
+	<!-- [LOGIN: CSS ] begin -->
+	<h:outputStylesheet name="login/login-style.css" library="css" />
+    <h:outputStylesheet name="login/font-awesome.css" library="css" />
+	<!-- [LOGIN: CS] end -->
+</h:head>
+
+<h:body>
+<f:view locale="#{language.locale}">
+	<div class="header" dir="#{msg.dir}">
+		<ui:insert name="header">
+			<ui:include src="/templates/standard/standardHeader.xhtml" />
+		</ui:insert>
+	</div>
+
+	<!-- slider -->
+	<ui:insert name="middle">
+		<ui:insert name="middle">
+			<ui:include src="/templates/standard/standardMiddleSlider.xhtml" />
+		</ui:insert>
+	</ui:insert>
+	<!-- slider -->
+
+	<!-- Main -->
+	<div id="main" dir="#{msg.dir}">
+		<ui:insert name="content">
+			<ui:include src="/templates/standard/standardContent.xhtml" />
+		</ui:insert>
+	</div>
+	<!-- End Main -->
+
+	<div id="footer" dir="#{msg.dir}">
+		<ui:insert name="footer">
+			<ui:include src="/templates/standard/standardFooter.xhtml" />
+		</ui:insert>
+	</div>
+</f:view>
+</h:body>
+
+</html>
