@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Hawn Nguyen Sample Webapp</title>
+	
+	<h:outputStylesheet name="standard-style.css" library="css" />
+	<!-- [menu] begin -->
+	<h:outputStylesheet name="menu/pro_dropdown_3.css" library="css" />
+	<h:outputScript library="js" name="menu/stuHover.js" />
+	<!-- [menu] end -->
+	
+	<!-- [genie menu dock] begin -->
+	<h:outputStylesheet name="menu/genie/dockstackgenie.css" library="css" />
+	<h:outputScript library="js" name="standard/jquery-1.4.1.min.js" />
+	<h:outputScript library="js" name="menu/genie/fisheye-iutil.min.js" />
+	<h:outputScript library="js" name="menu/genie/dock-example1.js" />
+	<h:outputScript library="js" name="menu/genie/stack-1.js"/>
+	<!-- [genie menu dock] end -->
+
+</h:head>
+
+<h:body>
+<f:view locale="#{language.locale}">
+	<div class="header">
+		<ui:insert name="header">
+			<ui:include src="/templates/standard/standardHeader.xhtml" />
+		</ui:insert>
+	</div>
+
+	<!-- menu -->
+	<ui:insert name="menu">
+		<ui:insert name="menu">
+			<ui:include src="/templates/masterMenu.xhtml" />
+		</ui:insert>
+	</ui:insert>
+	<!-- menu -->
+
+	<!-- Main -->
+	<div class="main-content">
+		<ui:insert name="content">
+			<ui:include src="/templates/standard/standardContent.xhtml" />
+		</ui:insert>
+	</div>
+	<!-- End Main -->
+
+	<div id="footer">
+		<ui:insert name="footer">
+			<ui:include src="/templates/standard/standardFooter.xhtml" />
+		</ui:insert>
+	</div>
+</f:view>
+</h:body>
+
+</html>

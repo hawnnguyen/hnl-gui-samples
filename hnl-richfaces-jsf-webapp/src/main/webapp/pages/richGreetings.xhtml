@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/templates/masterLayout.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:define name="menu">
+		<ui:include src="/templates/masterRichMenu.xhtml" />
+	</ui:define>
+
+	<ui:define name="content">
+		<center>
+		<br/>
+		<h:form>
+			<h:outputText value="Please Enter Text: "/><h:inputText value="#{user.name}">
+				<a4j:ajax event="keyup" render="out" />
+			</h:inputText>
+			<br/>
+			#{msg.greetings} <br/>
+			<h:outputText value="#{user.name}" id="out" />
+		</h:form>
+		</center>
+	</ui:define>
+
+</ui:composition>
+</html>

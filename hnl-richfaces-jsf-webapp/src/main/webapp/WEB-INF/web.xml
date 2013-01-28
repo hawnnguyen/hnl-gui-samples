@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Use this definition if using a Java EE 6 container This also stops Eclipse 
+	from complaining that 3.0 is not a valid version <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" 
+	http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"> -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	
+	<context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    
+    <!-- servlet definition and  mapping -->
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>    
+    
+    
+    <!-- ***Richfaces configuration BEGIN **-->
+	<!-- Plugging the "Blue Sky" skin into the project -->
+	<context-param>
+	   <param-name>org.richfaces.SKIN</param-name>
+	   <param-value>blueSky</param-value>
+	</context-param>
+	
+	<!-- Making the RichFaces skin spread to standard HTML controls -->
+	<context-param>
+	      <param-name>org.richfaces.CONTROL_SKINNING</param-name>
+	      <param-value>enable</param-value>
+	</context-param>
+	
+	<!-- ***Richfaces configuration END*** -->
+    
+    <!-- session configuration timeout -->
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <!-- Error Page Default Handling -->
+    <error-page>
+	    <exception-type>javax.faces.application.ViewExpiredException</exception-type>
+	    <location>/faces/inactivity.xhtml</location>
+	</error-page>
+	
+	<error-page>
+	    <exception-type>java.lang.Throwable</exception-type>
+	    <location>/faces/error.xhtml</location>
+	</error-page>
+    
+    <!-- welcome files -->
+    <welcome-file-list>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+	<!-- login config -->
+	<login-config>
+   		<auth-method>BASIC</auth-method>
+   </login-config>
+   
+	<!-- mime for fonts begin -->
+	<mime-mapping>
+        <extension>woff</extension>
+        <mime-type>font/fontawesome-webfont</mime-type>
+    </mime-mapping>
+    
+    <mime-mapping>
+        <extension>eot</extension>
+        <mime-type>font/fontawesome-webfont</mime-type>
+    </mime-mapping>
+    
+    <mime-mapping>
+        <extension>ttf</extension>
+        <mime-type>font/fontawesome-webfont</mime-type>
+    </mime-mapping>
+    
+    <mime-mapping>
+        <extension>svg</extension>
+        <mime-type>font/fontawesome-webfont</mime-type>
+    </mime-mapping>
+	<!-- mime for fonts end -->
+	
+</web-app>

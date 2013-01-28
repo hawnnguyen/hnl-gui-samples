@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+   <ui:composition template="/templates/standard/standardLayout.xhtml"
+   		xmlns:ui="http://java.sun.com/jsf/facelets">
+   		<ui:define name="middle">
+			<br/>   		
+   		</ui:define>
+   		<ui:define name="content">
+   			<div class="container">
+   			<br/><br/><br/>
+   			<center><h3> Sorry Your Session has expired Please click here to <h:link value="#{msg.login}" outcome="login" /></h3></center>
+   			
+   			<br/><br/><br/>
+   			</div>
+   		</ui:define>
+   		
+   </ui:composition>
+</html>

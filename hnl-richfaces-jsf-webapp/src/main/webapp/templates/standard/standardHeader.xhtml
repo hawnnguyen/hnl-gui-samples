@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+<body>
+	<ui:composition>
+		<h:form>
+		<!-- Logo + Navigation -->
+		<div id="top">
+			<div class="shell">
+				<h1 id="logo">
+					<h:graphicImage id="image-logo" alt="logo"
+						url="/resources/images/logo/hawnnguyen_bw_408x75.png" width="300"
+						height="71" />
+					<a href="#">Hawn Nguyen Sample POC</a>
+				</h1>
+				<div id="navigation">
+					<ul>
+						<li><h:link value="#{msg.home}" outcome="/default" /></li>
+						<li><a href="#">#{msg.contact}</a></li>
+						<li class="last"><h:link value="#{msg.login}" outcome="/login" /></li>
+						<!-- locale dropdown list begin -->
+						
+						<li>&nbsp;&nbsp;<h:selectOneMenu id="language" value="#{language.locale}"
+								onchange="this.form.submit();" >
+							<f:valueChangeListener type="com.hnl.sample.gui.LanguageChangeListener" />
+								<f:selectItems value="#{language.locales}" />
+							</h:selectOneMenu></li>
+						<!-- locale dropdown list end -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Logo + Navigation -->
+		</h:form>
+	</ui:composition>
+</body>
+</html>
+
+

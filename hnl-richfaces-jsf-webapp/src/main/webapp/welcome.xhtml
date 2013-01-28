@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:body>
+
+	<ui:composition template="templates/masterLayout.xhtml">
+   		
+   		<ui:define name="content">
+   			<br/>
+   			<div dir="#{msg.dir}">
+   			<center><h3>WELCOME <br/>
+   				<h2><u>#{user.username}</u></h2>
+   				 <br/> TO JSF WEBAPP!!!</h3>
+   				 <br/><br/>
+   				 <table border="1">
+   				 	<tr><td>#{msg.welcome}</td></tr>
+   				 </table>
+   			</center>
+			</div>
+			<!-- BEGIN DOCK 1 ============================================================ -->
+			<div id="dock">
+				<div class="dock-container">
+					<a class="dock-item" href="#"><span>Example&nbsp;1</span><h:graphicImage id="home-logo" url="/resources/images/menu/genie/dock/home.png" alt="home" /></a> 
+					<a class="dock-item" href="#"><span>Example&nbsp;2</span><h:graphicImage id="contact-logo" url="/resources/images/menu/genie/dock/email.png" alt="contact" /></a> 
+					<a class="dock-item" href="#"><span>Example&nbsp;3</span><h:graphicImage id="portfolio-logo" url="/resources/images/menu/genie/dock/portfolio.png" alt="portfolio" /></a> 
+					<a class="dock-item" href="#"><span>All&nbsp;Examples</span><h:graphicImage id="music-logo" url="/resources/images/menu/genie/dock/music.png" alt="music" /></a> 
+					<a class="dock-item" href="#"><span>Video</span><h:graphicImage id="video-logo" url="/resources/images/menu/genie/dock/video.png" alt="video" /></a> 
+					<a class="dock-item" href="#"><span>History</span><h:graphicImage id="history-logo" url="/resources/images/menu/genie/dock/history.png" alt="history" /></a> 
+					<a class="dock-item" href="#"><span>Calendar</span><h:graphicImage id="calendar-logo" url="/resources/images/menu/genie/dock/calendar.png" alt="calendar" /></a> 
+					<a class="dock-item" href="#"><span>Links</span><h:graphicImage id="links-logo" url="/resources/images/menu/genie/dock/link.png" alt="links" /></a> 
+					<a class="dock-item" href="#"><span>RSS</span><h:graphicImage id="rss-logo" url="/resources/images/menu/genie/dock/rss.png" alt="rss" /></a> 
+				</div><!-- end div .dock-container -->
+			</div><!-- end div .dock #dock -->
+			<!-- END DOCK 1 ============================================================ -->
+			
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>
